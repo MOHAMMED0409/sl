@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Upload Study Materials</title>
+	<link rel="stylesheet" type="text/css" href="upload.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Upload Study Materials</h1>
+		<form action="./upload.php" method="POST" enctype="multipart/form-data" onsubmit="show_alert()">
+			<label for="class">Select Class:</label>
+			<select id="class" name="class">
+				<option value="class2">Class 2</option>
+				<option value="class3">Class 3</option>
+				<option value="class4">Class 4</option>
+				<option value="class5">Class 5</option>
+			</select>
+			<label for="subject">Select Subject:</label>
+			<select id="subject" name="subject">
+				<option value="math">Math</option>
+				<option value="science">Science</option>
+				<option value="english">English</option>
+				<option value="social">Social</option>
+				<option value="evs">EVS</option>
+				<option value="hindi">Hindi</option>
+				<option value="computer">Computer</option>
+				<option value="arts">Art-eduction</option>
+			</select>
+			<label for="chapter">Select Chapter:</label>
+			<select id="chapter" name="chapter">
+				<option value="chapter1">Chapter 1</option>
+				<option value="chapter2">Chapter 2</option>
+				<option value="chapter3">Chapter 3</option>
+				<option value="chapter3">Chapter 4</option>
+			</select>
+			<input type="file" name="file">
+			<input name="submit" type="submit" value="Upload">
+		</form>
+	</div>
+	<script>
+		function show_alert() {
+	  alert("Uploaded successfully!");
+	}
+	</script>
+	<script src="upload.js"></script>
+
+
+	<nav class="nav">
+        <div class="container1">
+            <div class="logo">
+                <a href="#">Book Byte</a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="#">About</a></li>
+                    <!-- <li><a href="../login/index.html">Login</a></li> -->
+                    <!-- <li><a href="../login/signup.html">Signup</a></li> -->
+                    <li><a href="../contact.html">Contact</a></li>
+					<li><a href="../login/">Logout</a></li>
+					<li><a href="../login/signup.html">Signup</a></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+    <!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="./upload.js"></script>
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+
+</body>
+</html>
