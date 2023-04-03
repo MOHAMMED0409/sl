@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book</title>
+    <link rel="stylesheet" href="./book.css">
+</head>
+<body>
+    <!-- Nav bar -->
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="#">Book Byte</a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="#">About</a></li>
+                    <!-- <li><a href="./admin.html">Admin Login</a></li> -->
+                    <!-- <li><a href="./signup.html">Signup</a></li> -->
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="../categories/categories.html">Back</a></li>
+                    <li><a href="../login/">Logout</a></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="./book.js"></script>
+
+    <!-- book list -->
+
+    
+    
+<div class="bookcontainer">
+    <div class="book">
+              <div class="bookpic" style="background-image: url('https://raw.githubusercontent.com/Poojavpatel/BookStoreApp/master/img/jungle.jpg');"></div>
+              <div class="bookinfo">
+                <div class="title">The Jungle Book</div>
+                <div class="author">Rudyard Kipling</div>
+                <div class="stars"></div>
+                <ul class="controls">
+                  <li class="control">
+                    <a href="#">
+                      <svg class="icon icon--2x"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#download">
+                      <span class="invisible">Home</span>
+                    </a>
+                  </li><!-- li control ends-->
+                  <li class="control">
+                    <a href="#">
+                      <svg class="icon icon--2x"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#edit">
+                      <span class="invisible">Search</span>
+                    </a>
+                  </li><!-- li control ends-->
+                  <li class="control deletebutton">
+                    <a href="#">
+                      <svg class="icon icon--2x deletesvg"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#delete">
+                      <span class="invisible">Products</span>
+                    </a>
+                  </li><!-- li control ends-->
+                </ul><!--ul.controls ends-->
+              </div><!--bookinfo ends-->
+            </div><!--book end-->
+                  </div>
+    
+                    <!-- svg Data -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="icons">
+        <symbol id="download" viewBox="0 0 24 24"><path d="M21 14c-0.6 0-1 0.4-1 1v4c0 0.6-0.4 1-1 1h-14c-0.6 0-1-0.4-1-1v-4c0-0.6-0.4-1-1-1s-1 0.4-1 1v4c0 1.7 1.3 3 3 3h14c1.7 0 3-1.3 3-3v-4c0-0.6-0.4-1-1-1z"></path>
+        <path d="M11.3 15.7c0.1 0.1 0.2 0.2 0.3 0.2 0.1 0.1 0.3 0.1 0.4 0.1s0.3 0 0.4-0.1c0.1-0.1 0.2-0.1 0.3-0.2l5-5c0.4-0.4 0.4-1 0-1.4s-1-0.4-1.4 0l-3.3 3.3v-9.6c0-0.6-0.4-1-1-1s-1 0.4-1 1v9.6l-3.3-3.3c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l5 5z"></path></symbol>
+    </svg>
+
+
+</body>
+</html>
