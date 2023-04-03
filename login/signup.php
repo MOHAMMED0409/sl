@@ -1,7 +1,19 @@
 <?php
 
-include('./config.php');
+// include('./config.php');
 // $conn=mysqli_connect("localhost","root","","signup");
+$servername = "localhost";
+$username = "root";
+$password = "password";
+$database = "db";
+
+// Create connection
+$conn = new mysqli($servername,$username,$password,$database );
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
 
     $name =  $_POST["name"]; 
     $last_name =  $_POST["last_name"]; 
